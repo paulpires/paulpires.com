@@ -170,7 +170,20 @@ a:hover {
    IT Skills
    ========================================================================== */
 
-.progress {
+.label-skill {
+	/*background-color: #A30263;*/
+	background-color: #eeeeee;
+	border-radius: 0px;
+	color: #363636;
+	/*color: white;*/
+	display: inline-block;
+	font-weight: bold;
+	padding: 7px;
+	font-size: 1.2em;
+	margin-bottom: 3px;
+}
+
+/*.progress {
 	margin-bottom: 5px;
 	height: 25px;
 	background-color: white;
@@ -211,7 +224,6 @@ a:hover {
 }
 
 .progress-meter > .meter-right:last-child {
-	/* last-child = last element in the HTML */
 	border-left-width: 3px;
 }
 
@@ -228,7 +240,7 @@ a:hover {
 
 .progress-meter > .meter.meter-right > .meter-text {
 	text-align: right;
-}
+}*/
 
 /* 
    Hobbies

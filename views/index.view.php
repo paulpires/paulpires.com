@@ -271,53 +271,15 @@
 
 			<div class="box animated fadeInRight">
 				<h2>IT Skills</h2>
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" style="width: 75%;">
-						Java
-					</div>
-				</div>
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" style="width: 75%;">
-						PHP
-					</div>
-				</div>
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" style="width: 70%;">
-						Tcl / Tk
-					</div>
-				</div>
-		    	<div class="progress">
-					<div class="progress-bar" role="progressbar" style="width: 67%;">
-						HTML / HTML 5 / CSS 3
-					</div>
-		    	</div>
-				<div class="progress">
-					<div class="progress-bar" role="progressbar" style="width: 65%;">
-						Unix
-					</div>
-				</div>
-		    	<div class="progress">
-					<div class="progress-bar" role="progressbar" style="width: 65%;">
-						Relational DB: MySQL / Sybase
-					</div>
-		    	</div>
-		    	<div class="progress">
-					<div class="progress-bar" role="progressbar" style="width: 55%;">
-						Perforce / Git
-					</div>
-		    	</div>
-		    	<div class="progress">
-					<div class="progress-bar" role="progressbar" style="width: 45%;">
-						OO DB: Oracle Sql3
-					</div>
-		    	</div>
-				<div class="progress-meter">
-					<!-- from right to left -->
-					<div class="meter meter-right" style="width: 25%;"><span class="meter-text">Expert</span></div>
-					<div class="meter meter-right" style="width: 25%;"><span class="meter-text">Proficient</span></div>
-					<div class="meter meter-right" style="width: 25%;"><span class="meter-text">Comfortable</span></div>
-					<div class="meter meter-right" style="width: 25%;"><span class="meter-text">Beginner</span></div>
-				</div>
+				<span class="label label-skill">Java</span>
+				<span class="label label-skill">PHP</span>
+				<span class="label label-skill">Tcl / Tk</span>
+				<span class="label label-skill">HTML / HTML 5</span>
+				<span class="label label-skill">CSS 3</span>
+				<span class="label label-skill">Unix</span>
+				<span class="label label-skill">Relational DB: MySQL / Sybase</span>
+				<span class="label label-skill">Perforce / Git</span>
+				<span class="label label-skill">OO DB: Oracle Sql3</span>
 			</div><!-- .box -->
 
 			<div class="box animated fadeInRight">
