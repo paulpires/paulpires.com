@@ -2,6 +2,15 @@
 
 require('functions.php');
 
-// nothing to do here.
+if (isset($_GET['thanks'])) {
+	
+	view('index', array(
+		'thanks' => $_GET['thanks']
+	));
 
-view('index');
+} else {
+
+	view('index');
+
+}
+
