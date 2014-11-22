@@ -57,6 +57,7 @@
 	<div class="row"><!-- site content row -->
 		<!-- LEFT SIDE -->
 		<div class="col-xs-12 col-md-7">
+
 			<div class="box animated fadeInLeft">
 				<h2>About Me</h2>
 				<p>I am a recent Computer Science graduate living in <b>London</b>. I have a particular interest in <b>mobile</b> and <b>web</b> development and am keen to learn more and expand my knowledge within these areas.</p>
@@ -81,8 +82,10 @@
 								Focuses on functional programming, compilers and theory of computation.<br>
 								<i>Overall Classification: <b>Class I</b></i><br><br>
 								<b class="font-orange">Awards:</b><br>
-								Best Student (technical stream) awarded by City University London<br>
-								Worshipful Company of Information Technologists Prize for Best Student in Computer Science
+								<b>Best Student (technical stream) 2014,</b> awarded by:<br>
+								<span class="tab-in">City University London</span><br>
+								<span class="tab-in">British Computing Society</span><br>
+								<span class="tab-in">Worshipful Company of Information Technologists</span>
 							</p>
 							<!-- GRADES collapsable -->
 							<div class="collapse" id="grades">
@@ -224,10 +227,23 @@
 			</div>
 
 			<div class="box animated fadeInLeft">
+
 				<h2>Experience</h2>
 				<div class="job">
 					<div class="col-xs-3">
-						<h5>Fidessa PLC</h5>
+						<h5>Sky</h5>
+						<span class="subtitle">September 2014 - Present</span>
+					</div>
+
+					<div class="col-xs-9">
+						<h5>Associate Software Developer</h5>
+						<p>Currently apart of the Software Engineering Academy at Sky where I am working on a variety of interesting projects in a Scrum team made up of graduates.</p>
+					</div>
+				</div>
+
+				<div class="job">
+					<div class="col-xs-3">
+						<h5>Fidessa</h5>
 						<span class="subtitle">July 2012 - July 2013</span>
 					</div>
 
@@ -235,32 +251,7 @@
 						<h5>Implementation Consultant / Analyst Programmer</h5>
 						<p>Worked on the Citi Futures and Options (CTFO) project – a new derivatives trading platform for one the world’s largest investment banks. Initial responsibilities included assisting the client in managing the systems data. As my skills developed I was given more responsibility by developing important system maintenance tools. As I gained more confidence and experience I started work on designing and implementing solutions to meet customer requirements.</p>
 					</div>
-				</div>
-
-				<div class="job">
-					<div class="col-xs-3">
-						<h5>Crystal Chain</h5>
-						<span class="subtitle">June 2009 - October 2009</span>
-					</div>
-
-					<div class="col-xs-9">
-						<h5>Freelance Web Graphic Designer</h5>
-						<p>My main role in this position was to use basic editing skills in Adobe Photoshop to resize and edit photographs/banners for the client company website – <a href="http://www.crystalchain.com" target="_blank">www.crystalchain.com</a>. Other work involved having to update and upload new images to the websites database.</p>
-					</div>
-				</div>
-
-
-				<div class="job">
-					<div class="col-xs-3">
-						<h5>Sheredes School</h5>
-						<span class="subtitle">September 2008 - June 2009</span>
-					</div>
-
-					<div class="col-xs-9">
-						<h5>Teaching Assistant</h5>
-						<p>In this position my main role was to help out lower school students in their lessons, more specifically to help improve on their mathematical skills. Other duties involved marking homework and assisting the teacher with photocopying and organizing files/documents.</p>
-					</div>
-				</div>
+				</div>				
 
 			</div>
 
@@ -270,7 +261,11 @@
 		<div class="col-xs-12 col-md-5">
 
 			<div class="box animated fadeInRight">
-				<h2>IT Skills</h2>
+				<h2>Tech stack</h2>
+				<span class="label label-skill">Express.js</span>
+				<span class="label label-skill">Node.js</span>
+				<span class="label label-skill">Angular.js</span>
+				<span class="label label-skill">Javascript</span>
 				<span class="label label-skill">Java</span>
 				<span class="label label-skill">PHP</span>
 				<span class="label label-skill">Tcl / Tk</span>
