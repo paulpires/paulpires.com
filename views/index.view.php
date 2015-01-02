@@ -1,5 +1,4 @@
-<div class="container">
-	
+<div class="container paper paper-lift">	
 	<!-- ===================== Avatar + Welcome ===================== -->
 	<div class="row animated fadeInDown">
 		<div class="col-xs-12">
@@ -387,6 +386,4 @@
 			</div><!-- Contact box -->
 		</div><!-- RIGHT SIDE -->
 	</div><!-- site content row -->
-
 </div>
-
