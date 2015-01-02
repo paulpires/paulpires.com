@@ -1,4 +1,4 @@
-<div class="container paper paper-lift">	
+<div class="container paper paper-curl">	
 	<!-- ===================== Avatar + Welcome ===================== -->
 	<div class="row animated fadeInDown">
 		<div class="col-xs-12">
@@ -63,9 +63,22 @@
 			</div>
 
 			<div class="box animated fadeInLeft">
-				<h2>Education</h2>
+				<h2>History</h2>
 				
 				<section id="timeline" class="timeline-container">
+
+					<div class="timeline-block">
+						<div class="timeline-year">
+							<span class="year">2014</span>
+						</div>
+
+						<div class="timeline-content">
+							<img src="images/sky_logo.png" alt="City University London" width="60" style="float: right;">
+							<h4>Associate Software Developer @ Sky</h4>
+							<h5 class="subtitle">September 2014 - Present</h5>
+							<p>Currently apart of the Software Engineering Academy at Sky where I am working on a variety of interesting projects in a Scrum team made up of graduates.</p>
+						</div>
+					</div>
 
 					<!-- item 1 -->
 					<div class="timeline-block">
@@ -75,17 +88,27 @@
 						</div>
 						
 						<div class="timeline-content">
+							<img src="images/city_logo.png" alt="City University London" height="50" style="float: right;">
 							<h4>BSc (Hons) Computer Science @ City Universitiy London</h4>
 							<h5 class="subtitle">September 2010 - July 2014</h5>
 							<p>
-								Focuses on functional programming, compilers and theory of computation.<br>
-								<i>Overall Classification: <b>Class I</b></i><br><br>
+								<!-- Focuses on functional programming, compilers and theory of computation.<br> -->
+								<i>Overall Classification: <b>Class I</b></i><br>
 								<b class="font-orange">Awards:</b><br>
 								<b>Best Student (technical stream) 2014,</b> awarded by:<br>
 								<span class="tab-in">City University London</span><br>
 								<span class="tab-in">British Computing Society</span><br>
 								<span class="tab-in">Worshipful Company of Information Technologists</span>
 							</p>
+
+							<hr style="border-color: lightgrey; margin: 0px 0px 10px 0px; border: dashed thin lightgrey">
+							<img src="images/fidessa_logo.png" alt="City University London" width="80" style="float: right;">
+							<p><b class="font-orange">1 Year Placement:<br></b>
+							<b>Implementation Consultant @ Fidessa PLC</b></p>
+							<h5 class="subtitle">July 2012 - July 2013</h5>
+							<p>Worked on the Citi Futures and Options (CTFO) project – a new derivatives trading platform for one the world’s largest investment banks. Initial responsibilities included assisting the client in managing the systems data. As my skills developed I was given more responsibility by developing important system maintenance tools. As I gained more confidence and experience I started work on designing and implementing solutions to meet customer requirements.</p>
+							<hr style="border-color: lightgrey; margin: 0px 0px 10px 0px; border: dashed thin lightgrey">
+
 							<!-- GRADES collapsable -->
 							<div class="collapse" id="grades">
 
@@ -225,35 +248,6 @@
 				</section>
 			</div>
 
-			<div class="box animated fadeInLeft">
-
-				<h2>Experience</h2>
-				<div class="job">
-					<div class="col-xs-3">
-						<h5>Sky</h5>
-						<span class="subtitle">September 2014 - Present</span>
-					</div>
-
-					<div class="col-xs-9">
-						<h5>Associate Software Developer</h5>
-						<p>Currently apart of the Software Engineering Academy at Sky where I am working on a variety of interesting projects in a Scrum team made up of graduates.</p>
-					</div>
-				</div>
-
-				<div class="job">
-					<div class="col-xs-3">
-						<h5>Fidessa</h5>
-						<span class="subtitle">July 2012 - July 2013</span>
-					</div>
-
-					<div class="col-xs-9">
-						<h5>Implementation Consultant / Analyst Programmer</h5>
-						<p>Worked on the Citi Futures and Options (CTFO) project – a new derivatives trading platform for one the world’s largest investment banks. Initial responsibilities included assisting the client in managing the systems data. As my skills developed I was given more responsibility by developing important system maintenance tools. As I gained more confidence and experience I started work on designing and implementing solutions to meet customer requirements.</p>
-					</div>
-				</div>				
-
-			</div>
-
 		</div>
 
 		<!-- ===================== RIGHT SIDE ===================== -->
@@ -296,9 +290,8 @@
 				<h2>Hobbies</h2>
 				<div class="hobby">
 					<span class="label label-hobby">Reading about tech news (twit.tv, gizmodo.com, digg.com)</span>
-					<span class="label label-hobby">Android</span>
 					<span class="label label-hobby">WebDev</span>
-					<span class="label label-hobby">Sketching</span>
+					<span class="label label-hobby">Drawing</span>
 					<span class="label label-hobby">Fitness/Football</span>
 					<span class="label label-hobby">Programming</span>
 				</div>
