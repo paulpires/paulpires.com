@@ -22,14 +22,14 @@
 	<!-- fonts -->
 	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 	
-	<link rel="prefetch" href="images/avatar.png">
+	<link rel="prefetch" href="images/me.png">
 
 	<!-- favicon -->
 	<link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
 
 	<meta property="og:title" content="title" />
 	<meta property="og:description" content="description" />
-	<meta property="og:image" content="http://paulpires.com/images/avatar.png" />
+	<meta property="og:image" content="http://paulpires.com/images/me.png" />
 		
 </head>
 

@@ -3,7 +3,7 @@
 		<div class="col-xs-12">
 			<div id="header" class="text-center">
 				<div id="photo" class="animated flipInX">
-					<a href="index.php"><img src="images/avatar.png" alt="Paul Avatar" ></a>
+					<a href="index.php"><img src="images/me.png" alt="Paul Avatar" ></a>
 				</div>
 			</div>
 
