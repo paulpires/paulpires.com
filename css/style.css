@@ -42,7 +42,7 @@ a:hover {
 
 .container {
 	margin-top: 80px;
-	margin-bottom: 15px;
+	margin-bottom: 50px;
 	background-color: #fff;
 }
 
@@ -187,65 +187,6 @@ a:hover {
 	margin-bottom: 3px;
 }
 
-/*.progress {
-	margin-bottom: 5px;
-	height: 25px;
-	background-color: white;
-	box-shadow: none;
-	border-radius: 0px;
-}
-
-.progress-bar {
-	text-align: left;
-	text-overflow: ellipsis;
-	padding-top: 3px;
-	padding-left: 8px;
-	background-color: #f0563d;
-}
-
-.progress-meter {
-	min-height: 10px;
-	border-bottom: 3px solid rgb(213, 213, 213);
-	margin-bottom: 30px;
-}
-
-.progress-meter > .meter {
-	position: relative;
-	float: left;
-	min-height: 10px;
-	border-width: 0px;
-	border-style: solid;
-	border-color: rgb(213, 213, 213);
-}
-
-.progress-meter > .meter-left {
-	border-left-width: 3px;
-}
-
-.progress-meter > .meter-right {
-	float: right;
-	border-right-width: 3px;
-}
-
-.progress-meter > .meter-right:last-child {
-	border-left-width: 3px;
-}
-
-.progress-meter > .meter > .meter-text {
-	position: absolute;
-	display: inline-block;
-	bottom: -20px;
-	width: 100%;
-	font-weight: 700;
-	font-size: 10px;
-	color: rgb(213, 213, 213);
-	text-align: left;
-}
-
-.progress-meter > .meter.meter-right > .meter-text {
-	text-align: right;
-}*/
-
 /* 
    Hobbies
    ========================================================================== */
@@ -292,7 +233,19 @@ a:hover {
 	margin-bottom: 7px;
 }
 
+/**
+*
+* Paper shadow effect
+* Found at: http://beemuse.com/paper
+*
+* For it to play nicely with bootstrap, the following
+* customisation is needed.
+*
+**/
 
+.paper:before, .paper:after {
+	display: inline;
+}
 
 
 

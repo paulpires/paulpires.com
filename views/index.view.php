@@ -1,6 +1,4 @@
-<div class="container">
-	
-	<!-- ===================== Avatar + Welcome ===================== -->
+<div class="container paper paper-curl">	
 	<div class="row animated fadeInDown">
 		<div class="col-xs-12">
 			<div id="header" class="text-center">
@@ -40,7 +38,7 @@
 
 			</div>
 			<div id="download-cv">
-				<a href="https://www.dropbox.com/s/e5y7hkroij3i9m3/Paul_Pires_resume.pdf" target="_blank">
+				<a href="images/Paul_Pires_resume.pdf" target="_blank">
 					<button id="btn-download-cv" class="btn btn-primary">
 						<span class="glyphicon glyphicon-cloud-download"></span>
 						Download CV - PDF
@@ -54,7 +52,7 @@
 		</div>
 	</div>
 
-	<div class="row"><!-- site content row -->
+	<div class="row">
 		<!-- LEFT SIDE -->
 		<div class="col-xs-12 col-md-7">
 
@@ -64,11 +62,23 @@
 			</div>
 
 			<div class="box animated fadeInLeft">
-				<h2>Education</h2>
+				<h2>History</h2>
 				
 				<section id="timeline" class="timeline-container">
 
-					<!-- item 1 -->
+					<div class="timeline-block">
+						<div class="timeline-year">
+							<span class="year">2014</span>
+						</div>
+
+						<div class="timeline-content">
+							<img src="images/sky_logo.png" alt="Sky" width="60" class="pull-right">
+							<h4>Associate Software Developer @ Sky</h4>
+							<h5 class="subtitle">September 2014 - Present</h5>
+							<p>Currently a part of the Software Engineering Academy at Sky where I am working on a variety of interesting projects in a Scrum team made up of graduates.</p>
+						</div>
+					</div>
+
 					<div class="timeline-block">
 
 						<div class="timeline-year">
@@ -76,22 +86,31 @@
 						</div>
 						
 						<div class="timeline-content">
+							<img src="images/city_logo.png" alt="City University London" height="50" class="pull-right">
 							<h4>BSc (Hons) Computer Science @ City Universitiy London</h4>
 							<h5 class="subtitle">September 2010 - July 2014</h5>
 							<p>
-								Focuses on functional programming, compilers and theory of computation.<br>
-								<i>Overall Classification: <b>Class I</b></i><br><br>
+								<!-- Focuses on functional programming, compilers and theory of computation.<br> -->
+								<i>Overall Classification: <b>Class I</b></i><br>
 								<b class="font-orange">Awards:</b><br>
 								<b>Best Student (technical stream) 2014,</b> awarded by:<br>
 								<span class="tab-in">City University London</span><br>
 								<span class="tab-in">British Computing Society</span><br>
 								<span class="tab-in">Worshipful Company of Information Technologists</span>
 							</p>
+
+							<hr style="border-color: lightgrey; margin: 0px 0px 10px 0px; border: dashed thin lightgrey">
+							<img src="images/fidessa_logo.png" alt="Fidessa" width="80" class="pull-right">
+							<p><b class="font-orange">1 Year Placement:<br></b>
+							<b>Implementation Consultant @ Fidessa PLC</b></p>
+							<h5 class="subtitle">July 2012 - July 2013</h5>
+							<p>Worked on the Citi Futures and Options (CTFO) project – a new derivatives trading platform for one the world’s largest investment banks. Initial responsibilities included assisting the client in managing the systems data. As my skills developed I was given more responsibility by developing important system maintenance tools and also designed and implemented custom solutions to meet customer requirements.</p>
+							<hr style="border-color: lightgrey; margin: 0px 0px 10px 0px; border: dashed thin lightgrey">
+
 							<!-- GRADES collapsable -->
 							<div class="collapse" id="grades">
 
-								<!-- Year 3 -->
-								<h5 style="color: grey;">Year 4:</h5><!-- <h5 class="subtitle"> 2013-2014</h5> -->
+								<h5 style="color: grey;">Year 4:</h5>
 								<table class="table table-striped">
 								  <tbody>
 							  		<tr>
@@ -107,15 +126,15 @@
 										<td>Introduction to Data Mining</td><td>89.0%</td>
 									</tr>
 									<tr>
-										<td>Data Visualisation</td><td>86.2%</td>
+										<td>Data Visualisation</td><td>76.0%</td>
 									</tr>
 									<tr>
-										<td>Theory of Computation</td><td>76.0%</td>
+										<td>Theory of Computation</td><td>86.2%</td>
 									</tr>
 								  </tbody>
 								</table>
 
-								<h5 style="color: grey;">Year 3:</h5><!-- <h5 class="subtitle"> 2013-2014</h5> -->
+								<h5 style="color: grey;">Year 3:</h5>
 								<table class="table table-striped">
 								  <tbody>
 								  		<tr>
@@ -190,15 +209,14 @@
 					<div class="timeline-block">
 
 						<div class="timeline-year">
-							<!-- <img src="images/cd-icon-picture.svg" alt="Picture"> -->
 							<span class="year">2007</span>
 						</div>
 						
 						<div class="timeline-content">
 							<header style="">
+                                <!-- <img src="images/sheredes_logo.png" alt="Sheredes School" height="33" class="pull-right">-->
 								<h4>A Levels @ Sheredes School</h4>
 								<h5 class="subtitle">Nov 07 - June 09</h5>
-								<!-- <h4 style="float: right; text-align: right;">Sheredes School</h4> -->
 								<div class="clearfix"></div>
 							</header>							
 							<p>Mathematics <b>(A)</b>, Media Studies <b>(B)</b>, ICT <b>(C)</b> - <i>300 UCAS points</i></p>
@@ -209,50 +227,21 @@
 					<div class="timeline-block">
 
 						<div class="timeline-year">
-							<!-- <img src="images/cd-icon-picture.svg" alt="Picture"> -->
 							<span class="year">2003</span>
 						</div>
 						
 						<div class="timeline-content">
 							<header style="">
+                                <!-- <img src="images/ebsc_logo.png" alt="Escola Basica e Secundaria da Calheta" height="30" class="pull-right"> -->
 								<h4>Secondary School @ Escola Básica e Secundaria da Calheta</h4>
 								<h5 class="subtitle">Oct 03 - Nov 07</h5>
 								<div class="clearfix"></div>
-								<p>A small secondary school located in the beautiful island of <a href="https://www.facebook.com/turismodamadeira" target="_blank" style="color: #363636;">Madeira, Portugal</a>.</p>
+								<p>A small secondary school located on the beautiful island of <a href="https://www.facebook.com/turismodamadeira" target="_blank" style="text-decoration: none; color: #363636; border-bottom: 1px dashed #999;">Madeira, Portugal</a>.</p>
 							</header>
 						</div>
 					</div>
 
 				</section>
-			</div>
-
-			<div class="box animated fadeInLeft">
-
-				<h2>Experience</h2>
-				<div class="job">
-					<div class="col-xs-3">
-						<h5>Sky</h5>
-						<span class="subtitle">September 2014 - Present</span>
-					</div>
-
-					<div class="col-xs-9">
-						<h5>Associate Software Developer</h5>
-						<p>Currently apart of the Software Engineering Academy at Sky where I am working on a variety of interesting projects in a Scrum team made up of graduates.</p>
-					</div>
-				</div>
-
-				<div class="job">
-					<div class="col-xs-3">
-						<h5>Fidessa</h5>
-						<span class="subtitle">July 2012 - July 2013</span>
-					</div>
-
-					<div class="col-xs-9">
-						<h5>Implementation Consultant / Analyst Programmer</h5>
-						<p>Worked on the Citi Futures and Options (CTFO) project – a new derivatives trading platform for one the world’s largest investment banks. Initial responsibilities included assisting the client in managing the systems data. As my skills developed I was given more responsibility by developing important system maintenance tools. As I gained more confidence and experience I started work on designing and implementing solutions to meet customer requirements.</p>
-					</div>
-				</div>				
-
 			</div>
 
 		</div>
@@ -275,7 +264,7 @@
 				<span class="label label-skill">Relational DB: MySQL / Sybase</span>
 				<span class="label label-skill">Perforce / Git</span>
 				<span class="label label-skill">OO DB: Oracle Sql3</span>
-			</div><!-- .box -->
+			</div>
 
 			<div class="box animated fadeInRight">
 				<h2>Languages</h2>
@@ -297,9 +286,8 @@
 				<h2>Hobbies</h2>
 				<div class="hobby">
 					<span class="label label-hobby">Reading about tech news (twit.tv, gizmodo.com, digg.com)</span>
-					<span class="label label-hobby">Android</span>
 					<span class="label label-hobby">WebDev</span>
-					<span class="label label-hobby">Sketching</span>
+					<span class="label label-hobby">Drawing</span>
 					<span class="label label-hobby">Fitness/Football</span>
 					<span class="label label-hobby">Programming</span>
 				</div>
@@ -384,9 +372,7 @@
 
 					</div>
 				</form>
-			</div><!-- Contact box -->
-		</div><!-- RIGHT SIDE -->
-	</div><!-- site content row -->
-
+			</div>
+		</div>
+	</div>
 </div>
-

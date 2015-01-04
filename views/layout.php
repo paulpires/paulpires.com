@@ -9,10 +9,11 @@
 	<meta name="keywords" content="paul pires, paul jose pires,">
 	<meta property="og:title" content="">
 
-	<!-- CSS Lirbaries -->
+	<!-- CSS Libraries -->
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" href="css/beemuse.min.css">
 	
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="css/timeline.css">
@@ -41,6 +42,7 @@
 	<script src="js/jquery-1.10.2.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
+	
 	<!-- meh... -->
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -50,7 +52,6 @@
 
 	  ga('create', 'UA-53103927-1', 'auto');
 	  ga('send', 'pageview');
-
 	</script>
 
 </html>
