@@ -3,9 +3,9 @@
 require('functions.php');
 
 if (isset($_GET['thanks'])) {
-	view('index', array(
+	view('resume', array(
 		'thanks' => $_GET['thanks']
 	));
 } else {
-	view('index');
+	view('resume');
 }

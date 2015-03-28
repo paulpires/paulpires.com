@@ -3,6 +3,8 @@ require('functions.php');
 
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
+	$user_came_from = $_SERVER['HTTP_REFERER'] ? $_SERVER['HTTP_REFERER'] : '';
+
 	$contact_name    = trim($_POST['contact_name']);
 	$contact_email   = trim($_POST['contact_email']);
 	$contact_message = trim($_POST['contact_message']);
@@ -20,39 +22,49 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 	if ($error) {
 
-		view('index', array(
+		$data = array(
 			'error' => $error,
 			'contact_name' => $contact_name,
 			'contact_email' => $contact_email,
 			'contact_message' => $contact_message,
 			'email_invalid' => $email_invalid
-		));
+		);
 
+		if ($user_came_from == "resume.php") {
+			view('resume', $data);
+		} else {
+			view('index', $data);
+		}
+	
 	} else {
 
 		// send the email somwhere
 		if (mail("paulpires101@gmail.com", "paulpires.com message", "From: $contact_name ($contact_email) ::::: $contact_message")) {
 
-			header("Location: index.php?thanks");
+			header("Location: home?thanks");
 
 		} else {
 
 			$error = 1;
-			view('index', array(
+			$vals_to_pass_on = array(
 				'error' => $error,
 				'contact_name' => $contact_name,
 				'contact_email' => $contact_email,
 				'contact_message' => $contact_message,
 				'email_invalid' => $email_invalid,
 				'mailError' => $mailError
-			));
+			);
+
+			if ($user_came_from == "resume.php") {
+				view('resume', $vals_to_pass_on);
+			} else {
+				view('index', $vals_to_pass_on);
+			}
 
 		}
 
 	}
 
 } else {
-
-	header("Location: index.php");
-	
+	header("Location: home");
 }

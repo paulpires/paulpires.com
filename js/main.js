@@ -1,9 +1,3 @@
-
-
-/* 
- * After the grades section has CLOSED or OPENED change the appearance of the button
- * Check bootstrap API for info on events fired using this collapsable animation/feature
-*/
 $(document).ready(function($){
 
 	$('#grades').on('hidden.bs.collapse', function () {
@@ -16,21 +10,15 @@ $(document).ready(function($){
 		$('#readmore-button').append('<span id="readmore-chevron" class="glyphicon glyphicon-chevron-up" style="top: 3px;"></span>');
 	});
 
+	$('#contactAlert').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+		setTimeout(function() {
+			$('#contactAlert').addClass('animated hinge');
+			$('#contactAlert').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
+				function() {
+					$('#contactAlert').fadeOut();
+				}
+			);
+		}, 3000 );
+	});
+
 });
-
-// setTimeout(function() {
-// 	// $('#contactAlert').addClass('animated bounceIn');
-	$('#contactAlert').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
-		function() {
-			setTimeout(function() {
-				$('#contactAlert').addClass('animated hinge');
-				$('#contactAlert').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', 
-					function() {
-						$('#contactAlert').fadeOut();
-					}
-				);
-			}, 3000 );
-		}
-	);
-// }, 0);
-
