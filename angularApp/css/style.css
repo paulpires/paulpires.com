@@ -1,0 +1,62 @@
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
+
+/*
+   8080 styling
+   ========================================================================== */
+
+body{
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	font-size: 1em;
+	color: #363636;
+	background: #ededed;
+	/*background-image: url('../images/bg.png');*/
+}
+
+.container {
+	margin-top: 80px;
+	/*margin-bottom: 50px;*/
+	margin-left: 5%;
+	margin-right: 5%;
+	background-color: #fff;
+}
+
+
+/* temp stuff - may have to remove */
+
+#double-seperator {
+	padding-top: 10px;
+	padding-bottom: 20px;
+}
+
+#double-seperator > hr {
+	/*border-color: black;*/
+	margin-top: 3px;
+	margin-bottom: 0px;
+}
+
+#text-header h1{
+	margin: 0;
+	padding: 0;
+	font-size: 2.4em;
+	/*font-weight: 700;*/
+	text-transform: uppercase;
+	letter-spacing: -1px;
+}
+
+#text-header h1::first-line{
+	font-size: 1.5em;
+	letter-spacing: -4px;
+	font-weight: 800;
+	line-height: 1.5em;
+}
+
+#text-header::after {
+	height: 10px;
+	margin-top: 15px;
+}
+
+.paper:before, .paper:after {
+	display: inline;
+}

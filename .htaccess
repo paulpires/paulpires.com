@@ -8,7 +8,8 @@ RewriteRule ^resume/*$ ./resume.php
 RewriteRule ^cv/*$ ./resume.php
 RewriteRule ^home/*$ ./index.php
 RewriteRule ^contact/*$ ./contact.php
-RewriteRule ^intel8080/*$ ./intel8080.php
+RewriteRule ^intel8080/*$ ./angularApp/views/home.html
+#RewriteRule ^intel8080/*$ ./intel8080.php
 RewriteRule ^404/*$ ./404.php
 
 ErrorDocument 404 http://paulpires.com/404
