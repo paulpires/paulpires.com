@@ -10,7 +10,7 @@
 	<meta property="og:title" content="">
 
 	<!-- CSS Libraries -->
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/beemuse.min.css">
