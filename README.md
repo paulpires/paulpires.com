@@ -1,3 +1,3 @@
 # README #
 
-paulpires.com on the LAMP stack
+### paulpires.com on the LAMP stack ###
