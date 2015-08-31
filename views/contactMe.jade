@@ -1,0 +1,38 @@
+mixin contactMe(page, contactName, contactEmail, contactMessage)
+  form(name='contact', action=page, method='post')
+    .row
+      if error && (contactName.trim().length == 0)
+        .form-group.col-lg-12.has-error
+          input#contact_name.form-control(type='text', name='contactName', placeholder="What's your name?", required)
+      else
+        .form-group.col-lg-12
+          if contactName
+            input#contact_name.form-control(type='text', name='contactName', placeholder="What's your name", required='' value="#{contactName}")
+          else
+            input#contact_name.form-control(type='text', name='contactName', placeholder="What's your name", required='' value="")
+
+      if error && emailInvalid
+        .form-group.col-lg-12.has-error
+          .input-group
+            span.input-group-addon
+              span.glyphicon.glyphicon-envelope
+            input#contact_email.form-control(type='email', name='contactEmail', placeholder='Email', required='', value="#{contactEmail}")
+      else
+        .form-group.col-lg-12
+          .input-group
+            span.input-group-addon
+              span.glyphicon.glyphicon-envelope
+            if contactEmail
+              input#contact_email.form-control(type='email', name='contactEmail', placeholder='Email', required, value="#{contactEmail}")
+            else
+              input#contact_email.form-control(type='email', name='contactEmail', placeholder='Email', required)
+
+      if error && (contactMessage.trim().length == 0)
+        .form-group.col-lg-12.has-error
+          textarea#contact_message.form-control(name='contactMessage', rows='6', placeholder='So, whats on your mind?', required)
+      else
+        .form-group.col-lg-12
+          textarea#contact_message.form-control(name='contactMessage', rows='6', placeholder='So, whats on your mind?', required) #{contactMessage}
+
+      .form-group.col-lg-12
+        button.btn.btn-default.btn-inverse(type='submit') Send Message

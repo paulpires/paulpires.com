@@ -1,31 +1,15 @@
+include contactMe
+include topMessage
 extends layout
-
 block content
     .container.paper.paper-curl
         .row.animated.fadeInDown
             .col-xs-12
                 #text-header.text-center.font-thin
-                    if emailSent
-                        #contactAlert.contactMsg.alert.alert-success.animated.bounceIn(role='alert')
-                            b Thank you
-                            |  for your message! :-)
-                    else if error
-                        if emailInvalid
-                            .contactMsg.alert.alert-danger.animated.bounceIn(id='', role='alert')
-                                b Error:
-                                |  Please enter a valid email address!
-                        else if mailError
-                            .contactMsg.alert.alert-danger.animated.bounceIn(id='', role='alert')
-                                b Error:
-                                |  Oooops. An internal error occurred. This means your message was not sent. Please try again or contact me at paulpires101@gmail.com
-                        else
-                            .contactMsg.alert.alert-danger.animated.bounceIn(id='', role='alert')
-                                b Error:
-                                |  Please make sure you fill in all contact details!
-
+                    +topMessage(emailSent, error, emailInvalid, mailError)
                     h1 PaulPires.com
                         br
-                        | got something interesting to talk about? contact me below :-)
+                        | Want to get in touch? contact me below :-)
                 #double-seperator
                     hr
                     hr
@@ -44,34 +28,4 @@ block content
                         a(href='mailto:paulpires101@gmail.com')  paulpires101@gmail.com
                     |  or leave me a message below:
 
-                form(name='contact', action='/', method='post')
-                    .row
-                        if error && (contactName.trim().length == 0)
-                            .form-group.col-lg-12.has-error
-                                input#contact_name.form-control(type='text', name='contactName', placeholder="What's your name?", required)
-                        else
-                            .form-group.col-lg-12
-                                input#contact_name.form-control(type='text', name='contactName', placeholder="What's your name", required='' value="#{contactName}")
-
-                        if error && emailInvalid
-                            .form-group.col-lg-12.has-error
-                                .input-group
-                                    span.input-group-addon
-                                        span.glyphicon.glyphicon-envelope
-                                    input#contact_email.form-control(type='email', name='contactEmail', placeholder='Email', required='', value="#{contactEmail}")
-                        else
-                            .form-group.col-lg-12
-                                .input-group
-                                    span.input-group-addon
-                                        span.glyphicon.glyphicon-envelope
-                                    input#contact_email.form-control(type='email', name='contactEmail', placeholder='Email', required, value="#{contactEmail}")
-
-                        if error && (contactMessage.trim().length == 0)
-                            .form-group.col-lg-12.has-error
-                                textarea#contact_message.form-control(name='contactMessage', rows='6', placeholder='So, whats on your mind?', required)
-                        else
-                            .form-group.col-lg-12
-                                textarea#contact_message.form-control(name='contactMessage', rows='6', placeholder='So, whats on your mind?', required) #{contactMessage}
-
-                        .form-group.col-lg-12
-                            button.btn.btn-default.btn-inverse(type='submit') Send Message
+                +contactMe('/', contactName, contactEmail, contactMessage)
