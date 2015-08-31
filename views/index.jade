@@ -5,7 +5,7 @@ block content
         .row.animated.fadeInDown
             .col-xs-12
                 #text-header.text-center.font-thin
-                    if thanks
+                    if emailSent
                         #contactAlert.contactMsg.alert.alert-success.animated.bounceIn(role='alert')
                             b Thank you
                             |  for your message! :-)
@@ -46,51 +46,32 @@ block content
 
                 form(name='contact', action='/', method='post')
                     .row
-                        if error
-                            if contactName.trim().length == 0
-                                .form-group.col-lg-12.has-error
-                                    input#contact_name.form-control(type='text', name='contact_name', placeholder="What's your name?", required)
-                            else
-                                .form-group.col-lg-12
-                                    input#contact_name.form-control(type='text', name='contact_name', placeholder="What's your name", required='')
-                                    //#{contactName}
+                        if error && (contactName.trim().length == 0)
+                            .form-group.col-lg-12.has-error
+                                input#contact_name.form-control(type='text', name='contactName', placeholder="What's your name?", required)
                         else
                             .form-group.col-lg-12
-                                input#contact_name.form-control(type='text', name='contact_name', placeholder="What's your name?", required='')
+                                input#contact_name.form-control(type='text', name='contactName', placeholder="What's your name", required='' value="#{contactName}")
 
-                        if error
-                            if contactEmail.trim().length == 0 || emailInvalid
-                                .form-group.has_error.col-lg-12.has-error
-                                    .input-group
-                                        span.input-group-addon
-                                            span.glyphicon.glyphicon-envelope
-                                        input#contact_email.form-control(type='email', name='contact_email', placeholder='Email', required='', value=)
-                                        //#{contactEmail}
-                            else
-                                .form-group.has_error.col-lg-12
-                                    .input-group
-                                        span.input-group-addon
-                                            span.glyphicon.glyphicon-envelope
-                                        input#contact_email.form-control(type='email', name='contact_email', placeholder='Email', required='', value=)
-                                        //#{contactEmail}
+                        if error && emailInvalid
+                            .form-group.col-lg-12.has-error
+                                .input-group
+                                    span.input-group-addon
+                                        span.glyphicon.glyphicon-envelope
+                                    input#contact_email.form-control(type='email', name='contactEmail', placeholder='Email', required='', value="#{contactEmail}")
                         else
                             .form-group.col-lg-12
                                 .input-group
                                     span.input-group-addon
                                         span.glyphicon.glyphicon-envelope
-                                    input#contact_email.form-control(type='email', name='contact_email', placeholder='Email', required='')
+                                    input#contact_email.form-control(type='email', name='contactEmail', placeholder='Email', required, value="#{contactEmail}")
 
-                        if error
-                            if contactMessage.trim().length == 0
-                                .form-group.col-lg-12.has-error
-                                    textarea#contact_message.form-control(name='contact_message', rows='6', placeholder='So, whats on your mind?', required='')
-                            else
-                                .form-group.col-lg-12
-                                    textarea#contact_message.form-control(name='contact_message', rows='6', placeholder='So, whats on your mind?', required='')
-                                    //#{contactMessage}
+                        if error && (contactMessage.trim().length == 0)
+                            .form-group.col-lg-12.has-error
+                                textarea#contact_message.form-control(name='contactMessage', rows='6', placeholder='So, whats on your mind?', required)
                         else
                             .form-group.col-lg-12
-                                textarea#contact_message.form-control(name='contact_message', rows='6', placeholder='So, whats on your mind?', required='')
+                                textarea#contact_message.form-control(name='contactMessage', rows='6', placeholder='So, whats on your mind?', required) #{contactMessage}
 
                         .form-group.col-lg-12
                             button.btn.btn-default.btn-inverse(type='submit') Send Message

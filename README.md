@@ -1,3 +1,3 @@
 # README #
 
-## www.paulpires.com on the LAMP stack ##
+## www.paulpires.com on express with jade stack ##
