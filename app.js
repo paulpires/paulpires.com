@@ -5,11 +5,12 @@ var logger       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 
-
 // routes
 var index  = require('./routes/index');
 var resume = require('./routes/resume');
-var app    = express();
+
+var app   = express();
+var ghost = require('ghost');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -19,7 +20,7 @@ app.set('view engine', 'jade');
 app.use(favicon(__dirname + '/public/images/favicon.png'));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -28,30 +29,36 @@ app.use('/', index);
 app.use('/resume', resume);
 app.use('/cv', resume);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
+ghost().then(function (ghostServer) {
 
-// development error handler - will print stacktrace
-if (app.get('env') === 'development') {
+    app.use(ghostServer.config.paths.subdir, ghostServer.rootApp);
+    ghostServer.start(app);
+
+    // catch 404 and forward to error handler
+    app.use(function(req, res, next) {
+        var err = new Error('Not Found');
+        err.status = 404;
+        next(err);
+    });
+
+    // development error handler - will print stacktrace
+    if (app.get('env') === 'development') {
+        app.use(function(err, req, res, next) {
+            res.status(err.status || 500);
+            res.render('error', {
+                message: err.message,
+                error: err
+            });
+        });
+    }
+
+    // production error handler - no stacktraces leaked to user
     app.use(function(err, req, res, next) {
         res.status(err.status || 500);
-        res.render('error', {
+        res.render('404', {
             message: err.message,
-            error: err
+            error: {}
         });
-    });
-}
-
-// production error handler - no stacktraces leaked to user
-app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('404', {
-        message: err.message,
-        error: {}
     });
 });
 
