@@ -1,0 +1,50 @@
+doctype html
+html
+  head
+    title Paul Pires
+    meta(name='description', content="PaulPires.com - Paul's website")
+    meta(name='keywords', content='paul jose pires, paul pires, paul, pires')
+    
+    link(rel='shortcut icon', href='images/favicon.png', type='image/x-icon')
+    link(rel='icon', href='images/favicon.png', type='image/x-icon')
+    link(rel='stylesheet', href='styles/bootstrap/css/bootstrap-theme.min.css')
+    link(rel='stylesheet', href='styles/bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='styles/animate.min.css')
+    link(rel='stylesheet', href='styles/beemuse.min.css')
+    link(rel='stylesheet', href='styles/custom/style.min.css')
+    link(rel='stylesheet', href='styles/custom/timeline.min.css')
+    
+    script(defer='', src='styles/bootstrap/js/jquery.min.js', charset='utf-8')
+    script(defer='', src='styles/bootstrap/js/bootstrap.min.js', charset='utf-8')
+    script(defer='', src='js/main.min.js', charset='utf-8')
+
+  body
+    .container.paper.paper-raise
+      .row
+        #text-header.col-xs-6
+          a(href='/', style='color: black')
+            h1 Paul Pires
+        .col-xs-6.social
+          a(href='cv')
+            img(src='images/cv.svg')
+          a(href='mailto:paulpires101@gmail.com')
+            img(src='images/email.svg')
+          a(href='https://github.com/paulpires', target='_blank')
+            img(src='images/github.svg')
+          a(href='https://www.linkedin.com/pub/paul-pires/42/a0/53a', target='_blank')
+            img(src='images/linkedin.svg')
+        .col-xs-12
+          hr
+      block content
+
+    footer.container.footer
+      p(style="font-family: 'Quicksand'; font-size: 1.2em; color: grey;")
+        | Copyright © 2015, Paul Pires.
+
+    script(type='text/javascript').
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-53103927-1', 'auto');
+      ga('send', 'pageview');

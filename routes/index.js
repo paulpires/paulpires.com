@@ -4,10 +4,10 @@ var contact = require('./contact');
 
 router.get('/', function(req, res) {
   res.render('index');
-});
+})
 
-router.post('/', function(req, res) {
-  contact.contactMe(req, res, 'index')
-});
+router.get('/cv', function(req, res) {
+  res.render('cv')
+})
 
 module.exports = router;

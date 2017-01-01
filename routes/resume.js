@@ -6,8 +6,4 @@ router.get('/', function(req, res) {
     res.render('resume');
 });
 
-router.post('/', function(req, res) {
-    contact.contactMe(req, res, 'resume');
-});
-
 module.exports = router;

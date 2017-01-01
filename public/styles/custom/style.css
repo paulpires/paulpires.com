@@ -1,0 +1,236 @@
+
+@import url('http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+
+/*
+   General
+   ========================================================================== */
+
+body{
+  font-family: monospace;
+  font-weight: 400;
+  font-size: 1em;
+  color: #363636;
+  background: #ededed;
+  width: 100%;
+}
+
+a {
+  color: #EC7263;
+}
+
+.container {
+  width: 790px;
+  background-color: #fff;
+}
+
+@media (min-width: 750px) {
+  .container {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container {
+    width: 100%;
+    margin: 0px;
+  }
+  body {
+    background: white;
+  }
+  .paper {
+    position: inherit;
+    border: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+.social img {
+  width: 4em;
+  margin: 7px;
+  float: right
+}
+
+@media (max-width: 750px) {
+  .social img {
+    width: 30px;
+    margin-left: 4px;
+    margin-top: 12px;
+  }
+}
+
+a:hover {
+  color: #EC7263;
+}
+
+hr {
+  margin-top: 0px;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.tab-in {
+  margin-left: 20px;
+}
+
+.btn {
+  border-radius: 0px;
+}
+
+.btn-inverse {
+  background-color: #eeeeee;
+}
+
+.btn-inverse:hover {
+  background-color: white;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.font-orange {
+  color: #F0563D;
+}
+
+.box {
+  margin: 0 auto;
+}
+
+p {
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+#about-me {
+  width: 65%;
+  margin: 0;
+}
+
+#skills {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#download-cv {
+  float: right;
+}
+
+#download-cv a:hover {
+  text-decoration: none;
+}
+
+#btn-download-cv:hover {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+#header {
+  margin-top: -75px;
+}
+
+#photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  padding: 5px;
+  background: #ededed;
+  display: inline-block;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+#photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+#text-header h1{
+  margin: 0;
+  padding: 0;
+  font-size: 2.4em;
+  /*font-weight: 700;*/
+  letter-spacing: -1px;
+}
+
+#text-header h1::first-line{
+  font-size: 1.5em;
+  letter-spacing: -4px;
+  font-weight: 800;
+  line-height: 1.5em;
+}
+
+#text-header::after {
+  height: 10px;
+  margin-top: 15px;
+}
+
+#double-seperator {
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+#double-seperator > hr {
+  margin-top: 3px;
+  margin-bottom: 0px;
+}
+
+.footer {
+  background: transparent;
+  margin-top: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.skill {
+  font-size: 1.3em;
+  line-height: 1.5em;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.label-skill {
+  border-radius: 0px;
+  color: #363636;
+  display: inline-block;
+  font-weight: normal;
+  padding: 7px;
+  font-size: 1.2em;
+  margin-bottom: 3px;
+}
+
+#expert span {
+  background-color: #eeeeee;
+}
+
+#moderate span {
+  background-color: #eeeeee;
+}
+
+#its_been_a_while span {
+  background-color: #eeeeee;
+}
+
+/**
+*
+* Paper shadow effect
+* Found at: http://beemuse.com/paper
+*
+* For it to play nicely with bootstrap, the following
+* customisation is needed.
+*
+**/
+
+.paper:before, .paper:after {
+  display: inline;
+}

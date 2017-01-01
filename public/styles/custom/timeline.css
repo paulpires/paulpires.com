@@ -16,7 +16,6 @@ td:last-child {
    Timeline stuff
    ========================================================================== */
 
-/* Removing focus styling. */
 #readmore-button:focus {
     outline: none;
     color: #333;
@@ -24,23 +23,42 @@ td:last-child {
     border-color: #ccc;
 }
 
-/* timeline H1, etc. styles */
-.timeline-container h1, h2, h3, h4, h5 {
+.history hr {
+  margin: 0px;
+}
+
+.history h2, h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+
+.history p, table {
+  font-family: "Open Sans", sans-serif;
+}
+
+.history h3 {
+  font-size: 10px;
+  font-weight: inherit;
+  margin: 5px 0px 5px 0px;
+}
+
+.timeline-container h1, h3, h4, h5 {
+    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     margin-top: 2px;
 }
+
 .timeline-container h4 {
     font-size: 15px;
 }
 
 .timeline-container {
-    /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
     width: 90%;
     max-width: 1170px;
-    /*margin: 0 auto;*/
 }
 
-/* making sure the timeline boxes fit on small screens */
 @media (max-width: 600px) {
     .timeline-container {
         width: 85%;
@@ -49,7 +67,6 @@ td:last-child {
 
 #timeline {
     position: relative;
-    padding-top: 2em;
 }
 
 #timeline::before {
@@ -85,7 +102,8 @@ td:last-child {
     border-radius: 0.25em;
     padding: 1em;
     box-shadow: 0 1px 0 #dddddd;
-    width: 100%;
+    /*box-shadow: 0px 1px 0px 0px rgba(0,0,0,0.31);*/
+    width: 102.5%;
 }
 
 .timeline-content .cd-read-more, .timeline-content {
@@ -123,7 +141,29 @@ td:last-child {
     text-align: center;
 }
 
+.now {
+    width: 38px;
+    text-align: center;
+}
+
 .subtitle {
     font-size: 10px;
     opacity: .7;
+}
+
+.subtle-link {
+    color: #363636;
+    border-bottom: 1px dashed #999;
+}
+
+.subtle-link:hover {
+  color: #EC7263;
+}
+
+a:hover {
+  color: #EC7263;
+}
+
+.no-decoration {
+  text-decoration: none !important;
 }
