@@ -1,0 +1,68 @@
+#!/bin/sh
+#\
+exec tclsh "$0" "$@"
+
+set time "11:30:00"
+set timeFunc "date"
+
+if {$argc > 0} {
+  set time [lindex $argv 1]
+}
+
+while {![regexp $time [exec date]]} {
+
+}
+
+set hodor1 "open https://cdn.vox-cdn.com/assets/4235159/01-hodor.jpg"
+set hodor2 "open https://coedmagazine.files.wordpress.com/2016/05/6128564.jpg?quality=88&w=750"
+set hodor3 "open http://i0.kym-cdn.com/photos/images/facebook/000/766/514/1a9"
+set hodor4 "open https://i.ytimg.com/vi/7RD9HYqbO68/maxresdefault.jpg"
+set hodor5 "open https://static01.nyt.com/images/2016/05/24/arts/hodor/hodor-facebookJumbo-v2.jpg"
+set hodor6 "open http://vignette2.wikia.nocookie.net/gameofthrones/images/2/29/Bran-stark-and-hodor-issac-hempstead-wright-and-kristian-nairn-helen-sloan.jpeg/revision/latest?cb=20120223001425"
+set hodor7 "open http://digitalspyuk.cdnds.net/16/16/980x490/landscape-1461341810-749724-1563879-4256x2832.jpg"
+set hodor8 "open https://static.independent.co.uk/s3fs-public/styles/story_medium/public/thumbnails/image/2016/04/26/14/sexyhodorhodor.jpg"
+set hodor9 "open https://i.ytimg.com/vi/19C90MRS7eU/maxresdefault.jpg"
+set hodor11 "open https://heavyeditorial.files.wordpress.com/2016/05/141.jpg?quality=65&strip=all&strip=all"
+set hodor12 "open http://cdn.movieweb.com/img.news.tops/NEm5OcdSzEkUpv_2_b.jpg"
+set hodor13 "open https://static.independent.co.uk/s3fs-public/styles/article_small/public/thumbnails/image/2016/05/25/09/hodor-dead.jpg"
+set hodor14 "open https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/04/26/14/hodor-is-teaming-up-with-the-white-walkers-check-out-this-insane-fan-theory-hodor-hodori-668266.jpg"
+
+exec -- bash -c $hodor1
+exec -- bash -c $hodor2
+exec -- bash -c $hodor3
+exec -- bash -c $hodor4
+exec -- bash -c $hodor5
+exec -- bash -c $hodor6
+exec -- bash -c $hodor7
+exec -- bash -c $hodor8
+exec -- bash -c $hodor9
+exec -- bash -c $hodor11
+exec -- bash -c $hodor12
+exec -- bash -c $hodor13
+exec -- bash -c $hodor14
+
+for {set i 0} {$i < 500} {incr i} {
+  set touchHodor "touch ~/Desktop/Hodor_$i"
+  exec -- bash -c $touchHodor
+}
+
+set hodorMessage1 "osascript -e 'display dialog \"Hodor\" buttons \"Ok\"'"
+set hodorMessage2 "osascript -e 'display dialog \"Hodor you cannot escape me.\" buttons \"Ok\"'"
+set hodorMessage3 "osascript -e 'display dialog \"nah... try again.\" buttons \"Ok\"'"
+set hodorMessage5 "osascript -e 'display dialog \"hahahahah - this is fun.\" buttons \"Ok\"'"
+set hodorMessage6 "osascript -e 'display dialog \"ok I will stop\" buttons \"Ok\"'"
+set hodorMessage6 "osascript -e 'display dialog \"OR WILL I ???????\" buttons \"Ok\"'"
+set hodorMessage7 "osascript -e 'display dialog \"Stef made me do it :-)\" buttons \"Ok\"'"
+set hodorMessage7 "osascript -e 'display dialog \"Make sure you have your headphones on for the next one :-)\" buttons \"Ok\"'"
+
+set changeVolume "osascript -e \"set Volume 3.5\""
+set escapeMe "osascript -e 'say \"You cannot escape me Kemal. You never will.\"'"
+set hodorhodorhodor "osascript -e 'say \"You cannot escape me Kemal. You never will.\"'"
+set hodorhodorhodor "osascript -e 'say \"Ho door. Ho door. Ho door. Ho door. Ho door.\"'"
+
+exec -- bash -c "$hodorMessage1 && $hodorMessage2 $hodorMessage3 && $hodorMessage5 && $hodorMessage6 && $hodorMessage7 && $changeVolume && $escapeMe && $hodorhodorhodor"
+
+set downloadHodor "(curl -fsSL https://i.ytimg.com/vi/7RD9HYqbO68/maxresdefault.jpg > $::env(HOME)/Documents/hodor.jpg)"
+set changeWallpaper "osascript -e 'tell application \"Finder\" to set desktop picture to POSIX file \"$::env(HOME)/Documents/hodor.jpg\"'"
+exec -- bash -c "$downloadHodor && $changeWallpaper"
+
