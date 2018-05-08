@@ -46,18 +46,52 @@ a {
   }
 }
 
-.social img {
-  width: 4em;
-  margin: 7px;
-  float: right
+@media (max-width: 400px) {
+  #paul-pires {
+    text-align: center;
+  }
+  #text-header {
+    width: 100%;
+  }
+  .social {
+    width: fit-content;
+    margin: auto;
+    padding: 10px;
+    float: inherit;
+  }
+  #download-cv {
+    float: none !important;
+    text-align: center;
+  }
+  #timeline::before {
+    display: none;
+  }
+  .timeline-year {
+    display: none;
+  }
+  .timeline-content::before {
+    display: none;
+  }
+  .timeline-content {
+    width: 124.5% !important;
+    margin-left: -6px !important; 
+  }
+  #experience-title {
+    display: none !important;
+  }
 }
-
 @media (max-width: 750px) {
   .social img {
     width: 30px;
     margin-left: 4px;
     margin-top: 12px;
   }
+}
+
+.social img {
+  width: 4em;
+  margin: 7px;
+  float: right
 }
 
 a:hover {
