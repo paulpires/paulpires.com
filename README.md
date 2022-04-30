@@ -1,3 +1,1 @@
-# README #
-
-## www.paulpires.com on express with jade ##
+www.paulpires.com with nextjs
