@@ -22,16 +22,16 @@ export default function Layout({ children })
       </Head>
       <div className={containerStyle}>
         <header className='sm:flex sm:flex-row sm:justify-between flex flex-col items-center pb-2'>
-          <Link href='/'>
+          <Link href='/' passHref>
             <h1 className="hover:underline hover:cursor-pointer text-3xl font-black sm:pb-0 pb-2">
               Paul Pires
             </h1>
           </Link>
           <ul className='flex flex-row gap-3'>
-            <ImageLink image="/linkedin.svg" href={'https://www.linkedin.com/in/paulpires/'} />
-            <ImageLink image="/github.svg" href='https://github.com/paulpires' />
-            <ImageLink image="/twitter.svg" href='https://twitter.com/paul_pires' />
-            <Link href={'/resume.pdf'} passHref><ImageLink image="/cv.svg" /></Link>
+            <ImageLink image="/linkedin.svg" href={'https://www.linkedin.com/in/paulpires/'} alt='linkedin' />
+            <ImageLink image="/github.svg" href='https://github.com/paulpires' alt='github'/>
+            <ImageLink image="/twitter.svg" href='https://twitter.com/paul_pires' alt='twitter'/>
+            <Link href={'/resume.pdf'} passHref><ImageLink image="/cv.svg" alt='cv' /></Link>
           </ul>
         </header>
         <hr></hr>
@@ -47,12 +47,13 @@ export default function Layout({ children })
 function ImageLink(props) 
 {
   return (
-    <a href={props.href} target='_blank'>
+    <a href={props.href} target='_blank' rel='noreferrer'>
       <Image
         priority
         src={props.image}
         height={40}
         width={40}
+        alt={props.alt}
       />
     </a>
   )

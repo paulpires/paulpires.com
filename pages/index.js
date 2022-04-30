@@ -6,7 +6,7 @@ export default function Home()
     <Layout>
       <section className='pt-6 font-mono text-sm relative'>
         <p>
-          Hey, I'm Paul - a software engineer working remote in London 🇬🇧 with
+          Hey, I&apos;m Paul - a software engineer working remote in London 🇬🇧 with
           a particular interest in mobile and web technologies. I currently
           specialize in iOS and am working @ Lloyds Banking Group.
         </p>
@@ -25,7 +25,7 @@ export default function Home()
 function ExtraBold(props)
 {
   return (
-    <a href={props.href} target='_blank'>
+    <a href={props.href} target='_blank' rel='noreferrer'>
       <b className='font-extrabold'>
         {props.children}
       </b>
