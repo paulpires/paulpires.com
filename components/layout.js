@@ -23,7 +23,7 @@ export default function Layout({ children })
       <div className={containerStyle}>
         <header className='sm:flex sm:flex-row sm:justify-between flex flex-col items-center pb-2'>
           <Link href='/' passHref>
-            <h1 className="hover:underline hover:cursor-pointer text-3xl font-black sm:pb-0 pb-2">
+            <h1 className="hover:underline underline-offset-4 hover:cursor-pointer text-3xl font-black sm:pb-0 pb-2">
               Paul Pires
             </h1>
           </Link>
