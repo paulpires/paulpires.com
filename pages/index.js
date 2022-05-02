@@ -47,7 +47,7 @@ function Posts(props) {
           {
             props.posts.map(post => {
               return (
-                <Link href={`/posts/${post.id}`}>
+                <Link key={post.id} href={`/posts/${post.id}`} passHref>
                   <li className='pb-2 sm:pb-0.5 flex flex-row justify-between hover:cursor-pointer hover:underline underline-offset-4 decoration-dashed active:bg-orange-50'>
                     <div>-&nbsp;</div>
                     <div className='flex-1'>{post.title}</div>
