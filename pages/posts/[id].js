@@ -20,19 +20,21 @@ export async function getStaticProps({ params }) {
   }
 }
 
-// todo: styling ... 
 export default function Post({ postData }) {
   return (
     <Layout>
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article>
-        <h1>{postData.title}</h1>
-        <div>
+      <article className='pt-10'>
+        <h1 className='text-4xl font-black'>{postData.title}</h1>
+        <div className='font-mono pt-2 text-gray-400'>
           <p>{postData.date}</p>
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div
+         className='pt-5 font-mono prose prose-p:text-sm prose-li:text-sm'
+         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+         />
       </article>
     </Layout>
   )

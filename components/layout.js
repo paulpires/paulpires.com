@@ -37,7 +37,7 @@ export default function Layout({ children })
         <hr></hr>
         <main>{children}</main>
       </div>
-      <footer className='text-center relative'>
+      <footer className='text-center relative pb-8'>
         <p className='text-xs text-gray-400/80'>Copyright © 2022, Paul Pires.</p>
       </footer>
     </>
