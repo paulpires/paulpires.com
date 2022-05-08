@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import Head from 'next/head'
+import BoldLink from '../../components/boldLink'
 import Layout from '../../components/layout'
 import { getAllPostIds } from '../../lib/posts'
 import { getPostData } from '../../lib/posts'
@@ -32,10 +34,16 @@ export default function Post({ postData }) {
           <p>{postData.date}</p>
         </div>
         <div
-         className='pt-5 font-mono prose prose-p:text-sm prose-li:text-sm'
-         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-         />
+          className='pt-5 font-mono prose prose-lg prose-p:text-sm prose-li:text-sm'
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
       </article>
+      <hr className='mt-6'/>
+      <div className='pt-4 text-center'>
+        <Link href='/' passHref>
+          <BoldLink href='/'>Back home</BoldLink>
+        </Link>
+      </div>
     </Layout>
   )
 }

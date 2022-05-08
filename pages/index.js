@@ -27,7 +27,7 @@ export default function Home(props) {
           Feel free to contact me
           at <BoldLink href='mailto:paulpires101@gmail.com'>paulpires101@gmail.com</BoldLink> or
           connect with me
-          on <BoldLink href='https://www.linkedin.com/in/paulpires/'> LinkedIn</BoldLink>.
+          on <BoldLink href='https://www.linkedin.com/in/paulpires/' newTab> LinkedIn</BoldLink>.
         </p>
       </section>
       <section>
