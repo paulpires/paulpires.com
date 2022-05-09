@@ -4,6 +4,7 @@ import BoldLink from '../../components/boldLink'
 import Layout from '../../components/layout'
 import { getAllPostIds } from '../../lib/posts'
 import { getPostData } from '../../lib/posts'
+import Divider from '../../components/divider'
 
 export async function getStaticPaths() {
   const paths = getAllPostIds()
@@ -28,18 +29,18 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
       </Head>
-      <article className='pt-10'>
-        <h1 className='text-4xl font-black'>{postData.title}</h1>
+      <article className='pt-10 relative'>
+        <h1 className='text-4xl font-black dark:text-textLight'>{postData.title}</h1>
         <div className='font-mono pt-2 text-gray-400'>
           <p>{postData.date}</p>
         </div>
         <div
-          className='pt-5 font-mono prose prose-lg prose-p:text-sm prose-li:text-sm'
+          className='pt-5 font-mono prose prose-lg prose-p:text-sm prose-li:text-sm dark:prose-invert'
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </article>
-      <hr className='mt-6'/>
-      <div className='pt-4 text-center'>
+      <div className='mt-6'><Divider/></div>
+      <div className='pt-4 text-center dark:text-white'>
         <Link href='/' passHref>
           <BoldLink href='/'>Back home</BoldLink>
         </Link>
