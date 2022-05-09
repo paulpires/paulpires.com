@@ -16,24 +16,25 @@ export async function getStaticProps() {
 
 export default function Home(props) {
   return (
-    <Layout id='root' dark>
-      <section className='py-6 font-mono text-sm relative'>
-        <p>
-          Hey, I&apos;m Paul - a software engineer working remote in London 🇬🇧 with
-          a particular interest in mobile and web technologies. I currently
-          specialize in iOS and am working @ Lloyds Banking Group.
-        </p>
-        <br />
-        <p>
-          Feel free to contact me
-          at <BoldLink href='mailto:paulpires101@gmail.com'>paulpires101@gmail.com</BoldLink> or
-          connect with me
-          on <BoldLink href='https://www.linkedin.com/in/paulpires/' newTab> LinkedIn</BoldLink>.
-        </p>
-      </section>
-      <section>
-        <Posts posts={props.posts} />
-      </section>
+    <Layout id='root'>
+      <div className='prose dark:prose-invert prose-lg prose-p:text-sm font-mono relative'>
+        <section className=''>
+          <p>
+            Hey, I&apos;m Paul - a software engineer working remote in London 🇬🇧 with
+            a particular interest in mobile and web technologies. I currently
+            specialize in iOS and am working @ Lloyds Banking Group.
+          </p>
+          <p>
+            Feel free to contact me
+            at <BoldLink href='mailto:paulpires101@gmail.com'>paulpires101@gmail.com</BoldLink> or
+            connect with me
+            on <BoldLink href='https://www.linkedin.com/in/paulpires/' newTab> LinkedIn</BoldLink>.
+          </p>
+        </section>
+        <section>
+          <Posts posts={props.posts} />
+        </section>
+      </div>
     </Layout>
   )
 }
@@ -42,9 +43,9 @@ function Posts(props) {
   return (
     props.posts.length > 0 ? (
       <>
-        <Divider/>
-        <h1 className='text-m font-bold py-4 font-mono'>blog archive:</h1>
-        <ul className='font-mono text-sm'>
+        <Divider />
+        <h5 className='font-bold text-m py-4'>blog archive:</h5>
+        <ul className='font-mono text-sm p-0 m-0 prose-li:p-0 prose-li:m-0'>
           {
             props.posts.map(post => {
               return (

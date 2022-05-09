@@ -14,6 +14,10 @@ const containerStyle = `
   bg-white
   p-6
   md:my-8
+  dark:bg-secondary
+  md:dark:border-2
+  dark:border-slate-800
+  dark:text-textDark
 `
 
 export default function Layout({ dark, children }) {
@@ -24,7 +28,7 @@ export default function Layout({ dark, children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={containerStyle + 'dark:bg-secondary md:dark:border-2 dark:border-slate-800 dark:text-textDark'}>
+      <div className={containerStyle}>
         <header className='sm:flex sm:flex-row sm:justify-between flex flex-col items-center pb-2'>
           <Link href='/' passHref>
             <h1 className="hover:underline underline-offset-4 hover:cursor-pointer text-3xl font-black sm:pb-0 pb-2 dark:text-textLight">
@@ -36,7 +40,6 @@ export default function Layout({ dark, children }) {
             <ImageLink image={isDark ? '/github-white.svg' : '/github.svg'} href='https://github.com/paulpires' alt='github' />
             <ImageLink image={isDark ? '/twitter-white.svg' : '/twitter.svg'} href='https://twitter.com/paul_pires' alt='twitter' />
             <Link href={'/resume.pdf'} passHref><ImageLink image={isDark ? '/cv-white.svg' : '/cv.svg'} alt='cv' /></Link>
-            <button>{dark ? 'dark' : 'light'}</button>
           </ul>
         </header>
         <Divider />
