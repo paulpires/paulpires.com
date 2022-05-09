@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Divider from './divider'
+import { useTheme } from 'next-themes'
 
 const containerStyle = `
   container
@@ -16,12 +17,14 @@ const containerStyle = `
 `
 
 export default function Layout({ dark, children }) {
+  const { resolvedTheme } = useTheme()
+  const isDark = resolvedTheme === 'dark'
   return (
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={containerStyle + 'dark:bg-secondary dark:border-2 dark:border-slate-800 dark:text-textDark'}>
+      <div className={containerStyle + 'dark:bg-secondary md:dark:border-2 dark:border-slate-800 dark:text-textDark'}>
         <header className='sm:flex sm:flex-row sm:justify-between flex flex-col items-center pb-2'>
           <Link href='/' passHref>
             <h1 className="hover:underline underline-offset-4 hover:cursor-pointer text-3xl font-black sm:pb-0 pb-2 dark:text-textLight">
@@ -29,10 +32,10 @@ export default function Layout({ dark, children }) {
             </h1>
           </Link>
           <ul className='flex flex-row gap-3'>
-            <ImageLink image='/linkedin-white.svg' href={'https://www.linkedin.com/in/paulpires/'} alt='linkedin' />
-            <ImageLink image="/github-white.svg" href='https://github.com/paulpires' alt='github' />
-            <ImageLink image="/twitter-white.svg" href='https://twitter.com/paul_pires' alt='twitter' />
-            <Link href={'/resume.pdf'} passHref><ImageLink image="/cv-white.svg" alt='cv' /></Link>
+            <ImageLink image={isDark ? '/linkedin-white.svg' : '/linkedin.svg'} href={'https://www.linkedin.com/in/paulpires/'} alt='linkedin' />
+            <ImageLink image={isDark ? '/github-white.svg' : '/github.svg'} href='https://github.com/paulpires' alt='github' />
+            <ImageLink image={isDark ? '/twitter-white.svg' : '/twitter.svg'} href='https://twitter.com/paul_pires' alt='twitter' />
+            <Link href={'/resume.pdf'} passHref><ImageLink image={isDark ? '/cv-white.svg' : '/cv.svg'} alt='cv' /></Link>
             <button>{dark ? 'dark' : 'light'}</button>
           </ul>
         </header>
@@ -58,7 +61,6 @@ function ImageLink(props) {
   return (
     <a href={props.href} target='_blank' rel='noreferrer' className=''>
       <Image
-        className='fill-red-900'
         priority
         src={props.image}
         height={40}

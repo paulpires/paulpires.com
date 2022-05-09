@@ -8,7 +8,7 @@ html, body
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   position: relative;
   user-select: none;
-  background-color: #20262E;
+  background-color: var(--background-secondary);
 }
 
 p, h1, h2, h3, h4, h5, h6, li, code
@@ -16,12 +16,26 @@ p, h1, h2, h3, h4, h5, h6, li, code
   user-select: text;
 }
 
+:root 
+{
+  /* Your default theme */
+  --background-primary: #ededed;
+  --background-secondary: #ffffff;
+  --background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+[data-theme='dark'] {
+  --background-primary: #0E141B;
+  --background-secondary: #20262E;
+  --background-image: none;
+}
+
 @media screen(sm) 
 {
   html, body 
   {
-    /* background-color: #FFFFFF; */
-    background-color: #20262E;
+    background-color: var(--background-secondary);
+    background-image: none;
   }
 }
 
@@ -29,10 +43,8 @@ p, h1, h2, h3, h4, h5, h6, li, code
 {
   html, body
   {
-    /* 151F34 */
-    /* background-color: #ededed; */
-    background-color: #0E141B;
-    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%239C92AC' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); */
+    background-color: var(--background-primary);
+    background-image: var(--background-image);    
   }
 }
 
