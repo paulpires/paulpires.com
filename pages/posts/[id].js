@@ -41,8 +41,8 @@ export default function Post({ postData }) {
       </article>
       <div className='mt-6'><Divider/></div>
       <div className='pt-4 text-center dark:text-white'>
-        <Link href='/' passHref>
-          <BoldLink href='/'>Back home</BoldLink>
+        <Link href='/'>
+          <span className='hover:underline underline-offset-4 decoration-dashed font-extrabold'>Back home</span>
         </Link>
       </div>
     </Layout>
