@@ -18,17 +18,16 @@ export default function Home(props) {
   return (
     <Layout id='root'>
       <div className='prose dark:prose-invert prose-lg prose-p:text-sm font-mono relative'>
-        <section className=''>
+        <section>
           <p>
-            Hey, I&apos;m Paul - a software engineer working remote in London 🇬🇧 with
-            a particular interest in mobile and web technologies. I currently
-            specialize in iOS and am working @ Lloyds Banking Group.
+            Welcome 👋 I'm Paul, a software engineer in London 🇬🇧
+            specializing in <b className='font-extrabold'>iOS</b> but have a general interest in mobile + web tech. I'm currently working @&nbsp;
+            <BoldLink href='https://en.wikipedia.org/wiki/Lloyds_Banking_Group' newTab>Lloyds Banking Group</BoldLink>.
           </p>
           <p>
-            Feel free to contact me
-            at <BoldLink href='mailto:paulpires101@gmail.com'>paulpires101@gmail.com</BoldLink> or
-            connect with me
-            on <BoldLink href='https://www.linkedin.com/in/paulpires/' newTab> LinkedIn</BoldLink>.
+            Wanna get in touch? Message me
+            on <BoldLink href='https://www.linkedin.com/in/paulpires/' newTab>LinkedIn</BoldLink>
+            &nbsp;or <BoldLink href='https://www.twitter.com/paul_pires' newTab>Twitter</BoldLink>.
           </p>
         </section>
         <section>
@@ -44,7 +43,9 @@ function Posts(props) {
     props.posts.length > 0 ? (
       <>
         <Divider />
-        <h5 className='font-bold text-m py-4'>blog archive:</h5>
+        <h5 className='font-bold text-m py-4'>
+          blog archive:
+        </h5>
         <ul className='font-mono text-sm p-0 m-0 prose-li:p-0 prose-li:m-0'>
           {
             props.posts.map(post => {
