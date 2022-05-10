@@ -20,8 +20,8 @@ export default function Home(props) {
       <div className='prose dark:prose-invert prose-lg prose-p:text-sm font-mono relative'>
         <section>
           <p>
-            Welcome 👋 I'm Paul, a software engineer in London 🇬🇧
-            specializing in <b className='font-extrabold'>iOS</b> but have a general interest in mobile + web tech. I'm currently working @&nbsp;
+            Welcome 👋 I&apos;m Paul, a software engineer in London 🇬🇧
+            specializing in <b className='font-extrabold'>iOS</b> but have a general interest in mobile + web tech. I&apos;m currently working @&nbsp;
             <BoldLink href='https://en.wikipedia.org/wiki/Lloyds_Banking_Group' newTab>Lloyds Banking Group</BoldLink>.
           </p>
           <p>
