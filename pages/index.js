@@ -21,8 +21,11 @@ export default function Home(props) {
         <section>
           <p>
             Welcome 👋 I&apos;m Paul, a software engineer in London 🇬🇧
-            specializing in <b className='font-extrabold'>iOS</b> but have a general interest in mobile + web tech. I&apos;m currently working @&nbsp;
-            <BoldLink href='https://en.wikipedia.org/wiki/Lloyds_Banking_Group' newTab>Lloyds Banking Group</BoldLink>.
+            specializing in <b className='font-extrabold'>iOS</b> but have a general interest in mobile + web tech.
+          </p>
+          <p>
+          I&apos;m currently working @&nbsp;
+            <BoldLink href='https://withplum.com' newTab>Plum</BoldLink> - helping people automate their finances.
           </p>
           <p>
             Wanna get in touch? Message me

@@ -39,7 +39,7 @@ export default function Layout({ dark, children }) {
             <ImageLink image={isDark ? '/linkedin-white.svg' : '/linkedin.svg'} href={'https://www.linkedin.com/in/paulpires/'} alt='linkedin' />
             <ImageLink image={isDark ? '/github-white.svg' : '/github.svg'} href='https://github.com/paulpires' alt='github' />
             <ImageLink image={isDark ? '/twitter-white.svg' : '/twitter.svg'} href='https://twitter.com/paul_pires' alt='twitter' />
-            <Link href={'/resume.pdf'} passHref><ImageLink image={isDark ? '/cv-white.svg' : '/cv.svg'} alt='cv' /></Link>
+            {/* <Link href={'/resume.pdf'} passHref><ImageLink image={isDark ? '/cv-white.svg' : '/cv.svg'} alt='cv' /></Link> */}
           </ul>
         </header>
         <Divider />
