@@ -36,17 +36,17 @@ export default function Layout({ dark, children }) {
             </h1>
           </Link>
           <ul className='flex flex-row gap-3'>
-            <ImageLink image={isDark ? '/linkedin-white.svg' : '/linkedin.svg'} href={'https://www.linkedin.com/in/paulpires/'} alt='linkedin' />
-            <ImageLink image={isDark ? '/github-white.svg' : '/github.svg'} href='https://github.com/paulpires' alt='github' />
-            <ImageLink image={isDark ? '/twitter-white.svg' : '/twitter.svg'} href='https://twitter.com/paul_pires' alt='twitter' />
-            {/* <Link href={'/resume.pdf'} passHref><ImageLink image={isDark ? '/cv-white.svg' : '/cv.svg'} alt='cv' /></Link> */}
+            <ImageLink image={'/linkedin.svg'} href={'https://www.linkedin.com/in/paulpires/'} alt='linkedin' />
+            <ImageLink image={'/github.svg'} href='https://github.com/paulpires' alt='github' />
+            <ImageLink image={'/x.svg'} href='https://x.com/paul_pires' alt='x' />
+            {/* <Link href={'/resume.pdf'} passHref><ImageLink image={'/cv.svg'} alt='cv' /></Link> */}
           </ul>
         </header>
         <Divider />
         <main>{children}</main>
       </div>
       <footer className='text-center relative pb-8'>
-        <p className='text-xs text-gray-400/80'>Copyright © 2022, Paul Pires.</p>
+        <p className='text-xs text-gray-400/80'>Copyright © 2023, Paul Pires.</p>
       </footer>
     </>
   )

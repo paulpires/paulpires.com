@@ -33,6 +33,10 @@ p, h1, h2, h3, h4, h5, h6, li, code
   --background-image: none;
 }
 
+[data-theme='light'] {
+  --invertion: 100%;
+}
+
 @media screen(sm) 
 {
   html, body 
@@ -47,7 +51,7 @@ p, h1, h2, h3, h4, h5, h6, li, code
   html, body
   {
     background-color: var(--background-primary);
-    background-image: var(--background-image);    
+    background-image: var(--background-image);
   }
 }
 
@@ -60,4 +64,10 @@ a
 *
 {
   box-sizing: border-box;
+}
+
+img, svg
+{
+  -webkit-filter: invert(var(--invertion));
+  filter: invert(var(--invertion));
 }

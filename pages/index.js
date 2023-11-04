@@ -30,7 +30,7 @@ export default function Home(props) {
           <p>
             Wanna get in touch? Message me
             on <BoldLink href='https://www.linkedin.com/in/paulpires/' newTab>LinkedIn</BoldLink>
-            &nbsp;or <BoldLink href='https://www.twitter.com/paul_pires' newTab>Twitter</BoldLink>.
+            &nbsp;or on <BoldLink href='https://www.x.com/paul_pires' newTab>X</BoldLink>.
           </p>
         </section>
         <section>
