@@ -24,8 +24,7 @@ export default function Home(props) {
             specializing in <b className='font-extrabold'>iOS</b> but have a general interest in mobile + web tech.
           </p>
           <p>
-          I&apos;m currently working @&nbsp;
-            <BoldLink href='https://withplum.com' newTab>Plum</BoldLink> - helping people automate their finances.
+          I&apos;m currently working @ <BoldLink href='https://withplum.com' newTab>Plum</BoldLink> - helping people automate their finances.
           </p>
           <p>
             Wanna get in touch? Message me
@@ -45,7 +44,7 @@ function Posts(props) {
   return (props.posts.length > 0 ? (<>
     <Divider />
     <h5 className='font-bold text-m py-4'>
-      blog archive:
+      some ramblings...
     </h5>
     <ul className='font-mono text-sm p-0 m-0 prose-li:p-0 prose-li:m-0'>
       {
