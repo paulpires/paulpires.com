@@ -42,33 +42,29 @@ export default function Home(props) {
 }
 
 function Posts(props) {
-  return (
-    props.posts.length > 0 ? (
-      <>
-        <Divider />
-        <h5 className='font-bold text-m py-4'>
-          blog archive:
-        </h5>
-        <ul className='font-mono text-sm p-0 m-0 prose-li:p-0 prose-li:m-0'>
-          {
-            props.posts.map(post => {
-              return (
-                <Link key={post.id} href={`/posts/${post.id}`} passHref>
-                  <li className='pb-2 sm:pb-0.5 flex flex-row justify-between hover:cursor-pointer hover:underline underline-offset-4 decoration-dashed active:bg-orange-50 dark:active:bg-black'>
-                    <div>-&nbsp;</div>
-                    <div className='flex-1'>{post.title}</div>
-                    <div className='text-gray-400 ml-4'>
-                      <Date dateString={post.date} />
-                    </div>
-                  </li>
-                </Link>
-              )
-            })
-          }
-        </ul>
-      </>
-    ) : (<></>)
-  )
+  return (props.posts.length > 0 ? (<>
+    <Divider />
+    <h5 className='font-bold text-m py-4'>
+      blog archive:
+    </h5>
+    <ul className='font-mono text-sm p-0 m-0 prose-li:p-0 prose-li:m-0'>
+      {
+        props.posts.map(post => {
+          return (
+            <Link key={post.id} href={`/posts/${post.id}`}>
+              <li className='pb-2 sm:pb-0.5 flex flex-row justify-between hover:cursor-pointer hover:underline underline-offset-4 decoration-dashed active:bg-orange-50 dark:active:bg-black'>
+                <div>-&nbsp;</div>
+                <div className='flex-1'>{post.title}</div>
+                <div className='text-gray-400 ml-4'>
+                  <Date dateString={post.date} />
+                </div>
+              </li>
+            </Link>
+          );
+        })
+      }
+    </ul>
+  </>) : (<></>));
 }
 
 function Date({ dateString }) {

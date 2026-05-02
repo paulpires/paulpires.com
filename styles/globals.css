@@ -1,9 +1,9 @@
+@import "prism-themes/themes/prism-coldark-cold.css" screen and (prefers-color-scheme: light);
+@import "prism-themes/themes/prism-coldark-dark.css" screen and (prefers-color-scheme: dark);
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "prism-themes/themes/prism-coldark-cold.css" screen and (prefers-color-scheme: light);
-@import "prism-themes/themes/prism-coldark-dark.css" screen and (prefers-color-scheme: dark);
 
 html, body
 {

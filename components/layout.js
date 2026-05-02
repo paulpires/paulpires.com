@@ -30,7 +30,7 @@ export default function Layout({ dark, children }) {
       </Head>
       <div className={containerStyle}>
         <header className='sm:flex sm:flex-row sm:justify-between flex flex-col items-center pb-2'>
-          <Link href='/' passHref>
+          <Link href='/'>
             <h1 className="hover:underline underline-offset-4 hover:cursor-pointer text-3xl font-black sm:pb-0 pb-2 dark:text-textLight">
               Paul Pires
             </h1>
@@ -49,7 +49,7 @@ export default function Layout({ dark, children }) {
         <p className='text-xs text-gray-400/80'>Copyright © 2023, Paul Pires.</p>
       </footer>
     </>
-  )
+  );
 }
 
 function isDark() {
