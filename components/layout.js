@@ -46,7 +46,7 @@ export default function Layout({ dark, children }) {
         <main>{children}</main>
       </div>
       <footer className='text-center relative pb-8'>
-        <p className='text-xs text-gray-400/80'>Copyright © 2023, Paul Pires.</p>
+        <p className='text-xs text-gray-400/80'>Copyright © {new Date().getFullYear()}, Paul Pires.</p>
       </footer>
     </>
   );
